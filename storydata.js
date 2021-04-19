@@ -30,7 +30,7 @@ export const scenes =
       },
       b: {
         text: "Turn left.",
-        result: "ga"
+        result: "ba"
       },
       c: {
         text: "Turn right.",
@@ -63,11 +63,11 @@ export const scenes =
       q: "You see a river.",
       a: {
          text: "Go to the river.",
-         result: "ha"
+         result: "ba"
       },
       b: {
         text: "Turn around.",
-        result: "ga"
+        result: "aa"
       } 
     }
   }
