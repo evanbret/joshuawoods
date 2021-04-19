@@ -1,20 +1,24 @@
+body {
+  background-color: #000;
+}
+
 div {
   margin: 15px;
+  padding: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Arial;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 26px;
+  color: #7ac93c;
+  font-weight: 800;
 }
 
 #questionbox {
   margin-top: 30px;
 }
 
-#a {
-  color: #fc2403;
-}
-
-#b {
-  color: #7ac93c;
+.option:hover {
+  background-color: #7ac93c;
+  color: #000;
 }

@@ -1,73 +1,43 @@
 export const scenes = 
 {
-    aa: {
-      q: "You are standing in a yard. You see a house.",
-      a: {
-         text: "Go to the house.",
-         result: "ba"
-      },
-      b: {
-        text: "Turn around.",
-        result: "ca"
-      } 
-    },
-      ba: {
-      q: "You are at the front door of the house.",
-      a: {
-         text: "Knock on the door.",
-         result: "da"
-      },
-      b: {
-        text: "Look in the window.",
-        result: "ea"
-      } 
-    },
-      ca: {
-      q: "You see a forest.",
-      a: {
-         text: "Go to the woods.",
-         result: "aa"
-      },
-      b: {
-        text: "Turn left.",
-        result: "ba"
-      },
-      c: {
-        text: "Turn right.",
-        result: "fa"
-      }
-    },
-      da: {
-      q: "A troll answers the door.",
-      a: {
-         text: "Run away.",
-         result: "ca"
-      },
-      b: {
-        text: "Fight the troll.",
-        result: "aa"
-      } 
-    },
-      ea: {
-      q: "You see a troll inside the house.",
-      a: {
-         text: "Knock on the door.",
-         result: "da"
-      },
-      b: {
-        text: "Run away.",
-        result: "ca"
-      } 
-    },
-     fa: {
-      q: "You see a river.",
-      a: {
-         text: "Go to the river.",
-         result: "ba"
-      },
-      b: {
-        text: "Turn around.",
-        result: "aa"
-      } 
+  end: {
+    q: "The End.",
+    a: {
+      text: "Go back to the beginning.",
+      result: "aa"
     }
+  },
+  aa: {
+    q: "You wake up. You are not in bed. You are in the woods.",
+    a: {
+      text: "Go back to sleep.",
+      result: "ba"
+    },
+    b: {
+      text: "Look around.",
+      result: "ca"
+    } 
+  },
+  ba: {
+    q: "You shut your eyes. A bird calls your name.",
+    a: {
+      text: "Say hello to the bird.",
+      result: "end"
+    },
+    b: {
+      text: "Keep your eyes shut and do not talk.",
+      result: "end"
+    } 
+  },
+  ca: {
+    q: "You find a small creek.",
+    a: {
+      text: "Try to jump across the creek.",
+      result: "end"
+    },
+    b: {
+      text: "Try to swim in the creek.",
+      result: "end"
+    } 
   }
+}
