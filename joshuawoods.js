@@ -3,6 +3,15 @@
 
 import { scenes } from "./storydata.js";
 
+let freezeClic = true; // just modify that variable to disable all clics events
+
+document.addEventListener("click", e => {
+    if (freezeClic) {
+        e.stopPropagation();
+        e.preventDefault();
+    }
+}, true);
+
 let timeDelay = 0;
 
 const tappity = (opt, text) => {
@@ -22,6 +31,7 @@ window.onload = () => {
   let currentScenario;
   let blinkCursor; 
   function resetScenario(option) {
+    freezeClic = true;
     clearInterval(blinkCursor);
     timeDelay = 0;
     currentScenario = option ? scenes[currentScenario] && scenes[currentScenario][option] && scenes[currentScenario][option]["result"] : "aa";
@@ -44,6 +54,7 @@ window.onload = () => {
             const currentLast = lastOption.innerHTML; 
             lastOption.innerHTML = currentLast.substr(-1) == "_" ? currentLast.slice(0, -1) : currentLast + "_";
           }, 100);
+          freezeClic = false;
         }, timeDelay + 100);
       }
     })
